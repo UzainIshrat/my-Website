@@ -1,1 +1,60 @@
-<h1>Hello from Jenkins pipeline!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uzain Ishrat | DevOps Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#home">Uzain Ishrat</a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="tag">Karachi, Pakistan</p>
+      <h1>I build things,<br>then I make them <span class="deploy">deploy themselves.</span></h1>
+      <p class="lead">This page was pushed to GitHub, picked up by Jenkins, and delivered to an Nginx server on AWS EC2, with no manual copying.</p>
+      <a class="btn" href="#projects">See what I built</a>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article>
+          <h3>CI/CD Pipeline</h3>
+          <p>Jenkins pipeline that pulls code from GitHub and deploys it to a separate Nginx server over SSH.</p>
+        </article>
+        <article>
+          <h3>AWS EC2 Setup</h3>
+          <p>Two Ubuntu servers with their own security groups: one for Jenkins, one for the website.</p>
+        </article>
+        <article>
+          <h3>This Website</h3>
+          <p>Plain HTML and CSS, served by Nginx. Edit, commit, and the pipeline does the rest.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>Jenkins</li><li>AWS EC2</li><li>Nginx</li><li>Linux</li><li>Git and GitHub</li><li>SSH</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Want to work together? Write to <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+
+  <footer>Deployed with Jenkins. &copy; 2026 Uzain Ishrat</footer>
+</body>
+</html>
