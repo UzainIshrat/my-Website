@@ -8,14 +8,12 @@ pipeline {
             steps { checkout scm }
         }
         stage('Deploy') {
-            steps {
-                sshagent(['app-server-key']) {
-                    sh """
-                    scp -o StrictHostKeyChecking=no index.html ubuntu@${APP_IP}:/var/www/html/
-                    ssh -o StrictHostKeyChecking=no ubuntu@${APP_IP} 'sudo systemctl reload nginx'
-                    """
-                }
-            }
+    steps {
+        sshagent(['app-server-key']) {
+            sh '''
+            tar --exclude=.git --exclude=Jenkinsfile --exclude=README.md -czf - . | \
+            ssh -o StrictHostKeyChecking=no ubuntu@${APP_IP} "tar -xzf - -C /var/www/html"
+            '''
         }
     }
 }
