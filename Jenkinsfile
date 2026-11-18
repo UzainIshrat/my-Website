@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        APP_IP = '13.201.132.110'
+        APP_IP = '15.206.205.10'
     }
     stages {
         stage('Checkout') {
