@@ -5,7 +5,7 @@ pipeline {
         stage('Pull Code') {
             steps {
                 git branch: 'main',
-                    url: https://github.com/username/repository.git'
+                    url: 'https://github.com/UzainIshrat/my-Website.git'
             }
         }
     }
